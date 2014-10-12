@@ -1,0 +1,20 @@
+Django query -> (
+
+csvsearch.com:3000/query
+Content-Type:application/json
+{"query":"My query"}
+
+) -> Haskell (finds relevant row(s)) -> 
+
+{
+  "110": {
+    "city" : "London",
+    "details" : "bomb"
+  },
+  "689" : {
+    "address" : "University Avenou"
+  }
+}
+
+-> Django finds Wiki context ->
+Content-Type:application/json
